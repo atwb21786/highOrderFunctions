@@ -45,3 +45,18 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 
 const newNames = myNames.filter( item => item.charAt(0) === 'R');
 console.log(newNames);
+
+
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+  return function (location) {
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+  };
+
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+rocksWarning("Lambert and Sunnydale");
+rocksWarning("Franklin and Cedarlawn");
