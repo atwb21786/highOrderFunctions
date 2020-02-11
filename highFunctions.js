@@ -60,3 +60,8 @@ function hazardWarningCreator(typeOfWarning) {
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
 rocksWarning("Lambert and Sunnydale");
 rocksWarning("Franklin and Cedarlawn");
+
+const turtle = [ [0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2] ];
+
+const turtleMoves = turtle.filter( item => { return item[0] + item[1] } );
+console.log(turtleMoves);
